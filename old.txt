@@ -1,0 +1,25 @@
+Author  : Rasmus Wissing Kallehauge
+Email   : rkallehauge@gmail.com
+Created : Oct 31, 2018, 12:47:32 PM 
+
+
+                 OLD SITE BRANDING - REMOVED FOR SOME REASON IDK ASK SOMEBODY ELSE
+		<div class="site-branding">
+			<?php
+			the_custom_logo();
+			if ( is_front_page() && is_home() ) :
+				?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php
+			else :
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			endif;
+			$wpgang_description = get_bloginfo( 'description', 'display' );
+			if ( $wpgang_description || is_customize_preview() ) :
+				?>
+				<p class="site-description"><?php echo $wpgang_description; /* WPCS: xss ok. */ ?></p>
+			<?php endif; ?>
+		</div> .site-branding 
+
