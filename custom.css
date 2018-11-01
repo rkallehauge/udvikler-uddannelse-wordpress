@@ -4,6 +4,38 @@
 *   Created : Oct 31, 2018, 12:40:24 PM 
 *   Who needs a table of contents anyways?
 */
+/*
+    Navigation
+*/
+
 .nav-menu{
-    background-color: rgba(0,0,0,0.5)
+    background-color: #ccf;
+}
+
+
+
+/*
+    Content
+*/
+
+/* Span selector for links */
+
+span {
+    padding: 0 0.5em 0 0;
+}
+
+#content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.widget {
+    padding: 0.5em;
+    background-color: rgba(0,0,0,0.1);
+}
+.widget > ul{
+    margin: 0;
+    padding: 0.5em;
+    list-style: none;
+    background-color: rgba(0,0,0,0.1);
 }
