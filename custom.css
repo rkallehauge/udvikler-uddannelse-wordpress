@@ -9,10 +9,17 @@
 */
 
 .nav-menu{
-    background-color: #ccf;
+    background-color: #ccf  
 }
 
+.nav-menu > .menu-item{
+    transition: background-color 0.2;
+    font-size: 120%;    
+}
 
+.nav-menu > .menu-item:hover{
+    background-color: rgba(255,255,255,0.2);
+}
 
 /*
     Content
@@ -24,10 +31,39 @@ span {
     padding: 0 0.5em 0 0;
 }
 
-#content{
-    display: flex;
-    justify-content: space-between;
+/* Desktop */
+@media screen and (min-width: 37.5em) {
+    #content{
+        display: flex;
+        justify-content: space-between;
+    }
+    #hamburger-menu {
+        display: none;
+    }
 }
+
+#hamburger-menu > div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburger-open > #hamburger-bar1{
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+.hamburger-open > #hamburger-bar2{
+    opacity: 0;
+}
+.hamburger-open > #hamburger-bar3{
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+
 
 .widget {
     padding: 0.5em;
